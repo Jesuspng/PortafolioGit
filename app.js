@@ -50,8 +50,6 @@ function renderProfile(user) {
         <div class="profile-info">
             <h1>${user.name || user.login}</h1>
             <p class="bio">${user.bio || 'Desarrollador de Software'}</p>
-            <p class="location">${user.location || 'Sin ubicación'}</p>
-            
             <div class="profile-stats">
                 <div class="stat">
                     <span  >${user.public_repos}</span>
@@ -74,7 +72,7 @@ function renderProfile(user) {
 
 function renderProjects(repos) {
     if (repos.length === 0) {
-        projectsGrid.innerHTML = '<p style="color: #666;">No hay proyectos disponibles aún.</p>';
+        projectsGrid.innerHTML = '';
         return;
     }
 
